@@ -251,7 +251,7 @@ every **{interval}s** in the background.
 if __name__ == "__main__":
     start_scheduler()
     app = build_ui()
-    app.launch()
+    app.launch(server_name="0.0.0.0", server_port=7860)
 else:
     # When Hugging Face imports this module, start the scheduler and expose
     # the Gradio app as the top-level `demo` variable.
